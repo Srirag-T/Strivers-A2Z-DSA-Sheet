@@ -1,14 +1,15 @@
 package Array.Easy;
 import java.util.*;
 public interface CheckIfTheArrayIsSorted {
-    static void check(int arr[], int n) {
+    static boolean check(int arr[], int n) {
         for (int i = 0; i < n - 1; i++) {
-            if (arr[i] > arr[i + 1]) {
-                System.out.println("False");
-                return;
+            if (arr[i] > arr[i + 1] ) {
+            }
+            else{
+                return false;
             }
         }
-        System.out.println("True");
+        return true;
     }
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
@@ -19,6 +20,7 @@ public interface CheckIfTheArrayIsSorted {
         for(int i=0;i<n;i++){
             arr[i] = sc.nextInt();
         }
-        check(arr,n);
+        boolean result = check(arr,n);
+        System.out.println(result);
     }
 }
