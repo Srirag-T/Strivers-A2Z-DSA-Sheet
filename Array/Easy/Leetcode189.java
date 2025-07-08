@@ -1,22 +1,28 @@
 package Array.Easy;
 import java.util.*;
 public class Leetcode189 {
-    static void oneRightshift(int arr[],int n){
-        int i=n-1;
-        int temp = arr[n-1];
-        for(int j=n-2;j>=0;j--){
-            arr[i--]=arr[j];
-        }
+    static void dRightshift(int arr[],int k){
+     int[] temp = new int[arr.length];
+     int i=0;
+     for(int j= arr.length-k;j<arr.length;j++){
+         temp[i++]=arr[j];
+     }
 
-        arr[0] = temp;
+     for(int j=k;j<arr.length;j++){
+         temp[j] = arr[j-k];
+     }
+
+     for(int j=0;j<temp.length;j++){
+         arr[j] = temp[j];
+     }
 
     }
 
 
     static void rotate(int arr[],int k){
-        for(int i=0;i<k;i++){
-            oneRightshift(arr,arr.length);
-        }
+       k = k%arr.length;
+       dRightshift(arr,k);
+
     }
 
 
@@ -32,8 +38,9 @@ public class Leetcode189 {
         System.out.println("Enter no of times to rotate array:");
         int k = sc.nextInt();
         rotate(arr,k);
-        for(int i=0;i<n;i++){
+        for(int i=0;i<arr.length;i++){
             System.out.print(arr[i]+" ");
         }
+
     }
 }
