@@ -14,7 +14,7 @@ public class Left_Rotate_an_array_by_one_place {
         System.out.println("Enter Size of the array: ");
         int n = sc.nextInt();
         int[] arr = new int[n];
-        System.out.println("Ebter elements into the array:");
+        System.out.println("Enter elements into the array:");
         for(int i=0;i<n;i++){
             arr[i] = sc.nextInt();
         }
