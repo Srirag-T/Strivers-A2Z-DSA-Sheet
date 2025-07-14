@@ -12,11 +12,13 @@ public class LongestSubarrayWithGivenSumK_positives {
     static int longestsubarray(int[] arr, int x){
         int maximum = 0;
         for(int i=0;i<arr.length;i++){
+            int sum = 0;
             for(int j=i;j<arr.length;j++){
-                int sum = 0;
-                for(int k=i;k<=j;k++){
-                  sum = sum+arr[k];
-                }
+                sum = sum+arr[j];
+//                int sum = 0;
+//                for(int k=i;k<=j;k++){
+//                  sum = sum+arr[k];
+//                }
                 if(sum==x){
                     maximum = max(maximum,j-i+1);
                 }
