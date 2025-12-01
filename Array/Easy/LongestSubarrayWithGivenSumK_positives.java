@@ -1,5 +1,4 @@
 package Array.Easy;
-
 import java.util.Scanner;
 
 public class LongestSubarrayWithGivenSumK_positives {
