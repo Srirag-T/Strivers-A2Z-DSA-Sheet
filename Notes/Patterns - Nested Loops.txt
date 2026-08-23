@@ -1,0 +1,5 @@
+Patterns -> Nested Loops
+i) For the outer loop, count the no of lines.
+ii) For the inner loop, focus on the columns and connect them somehow to the rows.
+iii) Print them '*' inside the inner for loop.
+iv) Observe Symmetry [Optional]
